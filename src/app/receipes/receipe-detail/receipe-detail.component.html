@@ -1,0 +1,40 @@
+<div class="row">
+	<div class="col-xs-12">
+		<img [src]="receipe.imagePath" alt="{{receipe.name}}" class="img-responsive"
+		style="max-height:200px;">
+	</div>
+</div>
+<div class="row">
+	<div class="col-xs-12">
+		<h1>{{receipe.name}}</h1>
+	</div>
+</div>
+<div class="dropdown">
+	<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+		aria-expanded="false">
+		Manage Receipe
+	</button>
+	<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+		<li><a class="dropdown-item"
+			(click)="onAddToShoppingList()" style="cursor: pointer;">
+			To shopping List</a></li>
+		<li><a class="dropdown-item" (click)="onEditReceipe()" >Edit Receipe</a></li>
+		<li><a class="dropdown-item" (click)="onDeleteReceipe()">Delete Receipe</a></li>
+	</ul>
+</div>
+
+<div class="row">
+	<div class="col-xs-12">
+		{{receipe.description}}
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-xs-12">
+		<ul>
+			<li class="list-group-item" *ngFor="let ingredient of receipe.ingredients">
+                  {{ingredient.name}} - {{ingredient.amount}}
+			</li>
+		</ul>
+	</div>
+</div>

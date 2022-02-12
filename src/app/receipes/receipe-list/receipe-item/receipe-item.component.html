@@ -1,0 +1,14 @@
+<a class="list-group-item list-group-item-action"
+    [routerLink] = "[index]" routerLink = "active">
+    <div class="d-flex justify-content-between">
+        <div>
+        <h6>{{receipe.name}}</h6>
+        <p class="mb-1">{{receipe.description}}</p>
+    </div>
+    <div>
+        <img src="{{receipe.imagePath}}" alt="{{receipe.name}}" class="img-responsive float-end"
+            style="max-height: 50px;">
+        </div>
+    </div>
+</a>
+
